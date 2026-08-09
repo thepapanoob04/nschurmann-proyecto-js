@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BLACKLINE MOTORS | Concesionario</title>
+
+  <meta
+    name="description"
+    content="Blackline Motors - Vehículos premium, seminuevos y nuevos."
+  >
+
+  <style>
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    :root {
+      --black: #080808;
+      --black-2: #111111;
+      --black-3: #181818;
+      --white: #ffffff;
+      --gray: #a7a7a7;
+      --gray-2: #707070;
+      --line: #292929;
+      --soft: #f3f3f3;
+    }
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 78px;
+      background: rgba(8, 8, 8, 0.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      width: min(1200px, 92%);
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .logo span {
+      color: #999;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-button {
+      border: 1px solid #fff;
+      padding: 10px 18px;
+      border-radius: 3px;
+      transition: .3s;
+    }
+
+    .nav-button:hover {
+      background: #fff;
+      color: #000 !important;
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 28px;
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.95) 0%,
+          rgba(0,0,0,.72) 42%,
+          rgba(0,0,0,.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      width: min(1200px, 92%);
+      margin: auto;
+      padding-top: 70px;
+    }
+
+    .hero-label {
+      color: #aaa;
+      letter-spacing: 5px;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      font-size: clamp(48px, 7vw, 90px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    }
+
+    .hero p {
+      max-width: 550px;
+      color: #c7c7c7;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: 1px solid #fff;
+      background: #fff;
+      color: #000;
+      padding: 14px 24px;
+      border-radius: 3px;
+      font-weight: 700;
+      transition: .3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: #fff;
+    }
+
+    .btn-dark {
+      background: transparent;
+      color: #fff;
+    }
+
+    .btn-dark:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* =====================================================
+       SECCIONES
+    ===================================================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    .section-label {
+      color: #888;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .section-description {
+      color: #999;
+      max-width: 430px;
+    }
+
+    /* =====================================================
+       BUSCADOR / FILTROS
+    ===================================================== */
+
+    .inventory-section {
+      background: #f4f4f4;
+      color: #080808;
+    }
+
+    .filters {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr auto;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .filter-control {
+      border: 1px solid #ddd;
+      background: #fff;
+      color: #111;
+      min-height: 48px;
+      padding: 0 14px;
+      outline: none;
+    }
+
+    .filter-control:focus {
+      border-color: #000;
+    }
+
+    .filter-button {
+      background: #080808;
+      color: #fff;
+      border: 1px solid #080808;
+      padding: 0 25px;
+      font-weight: 700;
+    }
+
+    /* =====================================================
+       VEHÍCULOS
+    ===================================================== */
+
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .car-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
+
+    .car-image {
+      height: 230px;
+      position: relative;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .car-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+
+    .car-card:hover .car-image img {
+      transform: scale(1.05);
+    }
+
+    .car-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: #000;
+      color: #fff;
+      padding: 6px 10px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .car-info {
+      padding: 22px;
+    }
+
+    .car-brand {
+      color: #777;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .car-name {
+      font-size: 22px;
+      margin: 4px 0 10px;
+    }
+
+    .car-details {
+      display: flex;
+      gap: 15px;
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .car-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #eee;
+      padding-top: 16px;
+    }
+
+    .car-price {
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .view-car {
+      border: 1px solid #000;
+      background: #000;
+      color: #fff;
+      padding: 9px 13px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =====================================================
+       SERVICIOS
+    ===================================================== */
+
+    .services {
+      background: #080808;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .service {
+      background: var(--black);
+      padding: 35px 25px;
+      min-height: 230px;
+      transition: .3s;
+    }
+
+    .service:hover {
+      background: #151515;
+    }
+
+    .service-number {
+      color: #666;
+      font-size: 13px;
+      margin-bottom: 35px;
+    }
+
+    .service h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .service p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* =====================================================
+       NOSOTROS
+    ===================================================== */
+
+    .about {
+      background: #fff;
+      color: #080808;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 550px;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.15), rgba(0,0,0,.15)),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+    }
+
+    .about-text h2 {
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: .95;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .about-text p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #ddd;
+      margin-top: 35px;
+      padding-top: 25px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 30px;
+    }
+
+    .stat span {
+      color: #777;
+      font-size: 12px;
+    }
+
+    /* =====================================================
+       FINANCIACIÓN
+    ===================================================== */
+
+    .finance {
+      background: #111;
+    }
+
+    .finance-box {
+      background: #fff;
+      color: #000;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .finance-title {
+      font-size: 42px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .finance-text {
+      color: #666;
+    }
+
+    .finance-form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .finance-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .finance-field input {
+      width: 100%;
+      border: 1px solid #ccc;
+      height: 48px;
+      padding: 0 12px;
+      outline: none;
+    }
+
+    .finance-result {
+      background: #080808;
+      color: #fff;
+      padding: 25px;
+      margin-top: 5px;
+    }
+
+    .finance-result small {
+      color: #888;
+    }
+
+    .finance-result strong {
+      display: block;
+      font-size: 38px;
+      margin-top: 3px;
+    }
+
+    /* =====================================================
+       CONTACTO
+    ===================================================== */
+
+    .contact {
+      background: #f4f4f4;
+      color: #000;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .contact-info h2 {
+      font-size: 50px;
+      line-height: .95;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .contact-info p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      margin-bottom: 18px;
+    }
+
+    .contact-item span {
+      display: block;
+      color: #888;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 15px;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background: #050505;
+      border-top: 1px solid #222;
+      padding: 35px 0;
+      color: #777;
+    }
+
+    .footer-content {
+      width: min(1200px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    /* =====================================================
+       MODAL
+    ===================================================== */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.82);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(850px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #fff;
+      color: #000;
+      position: relative;
+    }
+
+    .modal-image {
+      height: 350px;
+    }
+
+    .modal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-content {
+      padding: 35px;
+    }
+
+    .modal-content h2 {
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+
+    .modal-close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      background: #000;
+      color: #fff;
+      font-size: 22px;
+      z-index: 5;
+    }
+
+    .modal-specs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin: 25px 0;
+    }
+
+    .modal-spec {
+      padding: 18px 10px;
+      border-right: 1px solid #ddd;
+    }
+
+    .modal-spec:last-child {
+      border: 0;
+    }
+
+    .modal-spec small {
+      color: #888;
+      display: block;
+    }
+
+    .modal-price {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    /* =====================================================
+       TOAST
+    ===================================================== */
+
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #fff;
+      color: #000;
+      padding: 17px 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      transform: translateY(120px);
+      opacity: 0;
+      transition: .4s;
+      z-index: 5000;
+      border-left: 4px solid #000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .filters {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .filter-button {
+        min-height: 48px;
+      }
+
+      .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid,
+      .finance-box {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        height: 68px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+        gap: 20px;
+        display: none;
+        border-bottom: 1px solid #222;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 90vh;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-description {
+        margin-top: 20px;
+      }
+
+      .filters,
+      .cars-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        height: 320px;
+      }
+
+      .stats {
+        gap: 10px;
+      }
+
+      .finance-box {
+        padding: 30px 20px;
+      }
+
+      .contact-info h2 {
+        font-size: 42px;
+      }
+
+      .modal-specs {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .modal-image {
+        height: 230px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================================================
+       HEADER
+  ==================================================== -->
+
+  <header>
+    <nav class="nav">
+
+      <a href="#inicio" class="logo">
+        BLACK<span>LINE</span>
+      </a>
+
+      <button class="menu-button" id="menuButton">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#inventario">Inventario</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#financiacion">Financiación</a></li>
+        <li><a href="#contacto" class="nav-button">Contactar</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ===================================================
+       HERO
+  ==================================================== -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+
+        <div class="hero-label">
+          Concesionario premium
+        </div>
+
+        <h1>
+          Conduce<br>
+          <span>algo diferente.</span>
+        </h1>
+
+        <p>
+          Vehículos seleccionados, financiación flexible y una
+          experiencia de compra diseñada para quienes buscan algo más.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#inventario" class="btn">
+            Ver inventario
+          </a>
+
+          <a href="#contacto" class="btn btn-dark">
+            Hablar con un asesor
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         INVENTARIO
+    ==================================================== -->
+
+    <section class="inventory-section" id="inventario">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-label">
+              Nuestro inventario
+            </div>
+
+            <h2 class="section-title">
+              Encuentra tu<br>próximo vehículo
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Explora nuestra selección de vehículos nuevos y
+            seminuevos. Utiliza los filtros para encontrar
+            exactamente lo que buscas.
+          </p>
+
+        </div>
+
+
+        <!-- Filtros -->
+
+        <div class="filters">
+
+          <input
+            type="text"
+            id="searchInput"
+            class="filter-control"
+            placeholder="Buscar marca o modelo..."
+          >
+
+          <select id="brandFilter" class="filter-control">
+            <option value="">Todas las marcas</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Audi">Audi</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Tesla">Tesla</option>
+          </select>
+
+          <select id="typeFilter" class="filter-control">
+            <option value="">Todos los tipos</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedán">Sedán</option>
+            <option value="Deportivo">Deportivo</option>
+            <option value="Eléctrico">Eléctrico</option>
+          </select>
+
+          <select id="priceFilter" class="filter-control">
+            <option value="">Cualquier precio</option>
+            <option value="50000">Hasta $50.000</option>
+            <option value="80000">Hasta $80.000</option>
+            <option value="100000">Hasta $100.000</option>
+          </select>
+
+          <button class="filter-button" id="clearFilters">
+            LIMPIAR
+          </button>
+
+        </div>
+
+
+        <!-- Vehículos -->
+
+        <div class="cars-grid" id="carsGrid"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SERVICIOS
+    ==================================================== -->
+
+    <section class="services" id="servicios">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div>
+            <div class="section-label">
+              Más que vehículos
+            </div>
+
+            <h2 class="section-title">
+              Nuestros<br>servicios
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Todo lo que necesitas antes, durante y después
+            de comprar tu vehículo.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service">
+            <div class="service-number">01</div>
+            <h3>Financiación</h3>
+            <p>
+              Diseñamos opciones de financiación adaptadas
+              a tu presupuesto.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">02</div>
+            <h3>Compra tu vehículo</h3>
+            <p>
+              Valoramos tu vehículo actual y te ayudamos
+              a realizar el cambio.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">03</div>
+            <h3>Taller especializado</h3>
+            <p>
+              Mantenimiento y revisiones realizadas por
+              técnicos especializados.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">04</div>
+            <h3>Garantía</h3>
+            <p>
+              Protección para que disfrutes tu vehículo
+              con total tranquilidad.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         NOSOTROS
+    ==================================================== -->
+
+    <section class="about" id="nosotros">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image"></div>
+
+          <div class="about-text">
+
+            <div class="section-label">
+              Blackline Motors
+            </div>
+
+            <h2>
+              No vendemos<br>
+              simplemente<br>
+              coches.
+            </h2>
+
+            <p>
+              Seleccionamos cada vehículo pensando en diseño,
+              rendimiento, tecnología y confiabilidad.
+            </p>
+
+            <p>
+              Nuestro objetivo es que comprar un vehículo
+              sea una experiencia sencilla, transparente
+              y diferente.
+            </p>
+
+            <a href="#contacto" class="btn">
+              Conoce más
+            </a>
+
+            <div class="stats">
+
+              <div class="stat">
+                <strong>12+</strong>
+                <span>Años de experiencia</span>
+              </div>
+
+              <div class="stat">
+                <strong>850+</strong>
+                <span>Vehículos vendidos</span>
+              </div>
+
+              <div class="stat">
+                <strong>98%</strong>
+                <span>Clientes satisfechos</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FINANCIACIÓN
+    ==================================================== -->
+
+    <section class="finance" id="financiacion">
+
+      <div class="container">
+
+        <div class="finance-box">
+
+          <div>
+
+            <div class="section-label">
+              Calculadora
+            </div>
+
+            <h2 class="finance-title">
+              Calcula<br>tu cuota
+            </h2>
+
+            <p class="finance-text">
+              Introduce el precio del vehículo, la entrada
+              y el plazo para obtener una estimación de tu
+              cuota mensual.
+            </p>
+
+          </div>
+
+
+          <div class="finance-form">
+
+            <div class="finance-field">
+              <label>Precio del vehículo</label>
+              <input
+                type="number"
+                id="vehiclePrice"
+                value="60000"
+                min="1000"
+              >
+            </div>
+
+            <div class="finance-field">
+              <label>Entrada</label>
+              <input
+                type="number"
+                id="downPayment"
+                value="10000"
+                min="0"
+              >
+            </div>
+
+            <div class="finance-field">
+              <label>Plazo (meses)</label>
+              <input
+                type="number"
+                id="loanMonths"
+                value="60"
+                min="12"
+                max="120"
+              >
+            </div>
+
+            <div class="finance-field">
+              <label>Tasa anual (%)</label>
+              <input
+                type="number"
+                id="interestRate"
+                value="8.5"
+                min="0"
+                step=".1"
+              >
+            </div>
+
+            <div class="finance-result">
+
+              <small>
+                CUOTA MENSUAL ESTIMADA
+              </small>
+
+              <strong id="monthlyPayment">
+                $0
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CONTACTO
+    ==================================================== -->
+
+    <section class="contact" id="contacto">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <div class="section-label">
+              Hablemos
+            </div>
+
+            <h2>
+              Encuentra<br>
+              tu próximo<br>
+              vehículo.
+            </h2>
+
+            <p>
+              Déjanos tus datos y uno de nuestros asesores
+              se pondrá en contacto contigo.
+            </p>
+
+            <div class="contact-item">
+              <span>Teléfono</span>
+              +57 300 000 0000
+            </div>
+
+            <div class="contact-item">
+              <span>Email</span>
+              ventas@blacklinemotors.com
+            </div>
+
+            <div class="contact-item">
+              <span>Horario</span>
+              Lunes - Sábado · 8:00 - 18:00
+            </div>
+
+          </div>
+
+
+          <form class="contact-form" id="contactForm">
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Nombre completo"
+              required
+            >
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Correo electrónico"
+              required
+            >
+
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Teléfono"
+              required
+            >
+
+            <select id="interest" required>
+
+              <option value="">
+                ¿Qué te interesa?
+              </option>
+
+              <option>
+                Comprar un vehículo
+              </option>
+
+              <option>
+                Vender mi vehículo
+              </option>
+
+              <option>
+                Financiación
+              </option>
+
+              <option>
+                Servicio técnico
+              </option>
+
+            </select>
+
+            <textarea
+              id="message"
+              placeholder="Cuéntanos cómo podemos ayudarte..."
+            ></textarea>
+
+            <button class="btn" type="submit">
+              ENVIAR SOLICITUD
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ===================================================
+       FOOTER
+  ==================================================== -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-logo">
+        BLACKLINE
+      </div>
+
+      <div>
+        © 2026 Blackline Motors. Todos los derechos reservados.
+      </div>
+
+      <div>
+        Privacidad · Términos
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ===================================================
+       MODAL VEHÍCULO
+  ==================================================== -->
+
+  <div class="modal" id="carModal">
+
+    <div class="modal-box">
+
+      <button class="modal-close" id="modalClose">
+        ×
+      </button>
+
+      <div class="modal-image">
+        <img id="modalImage" src="" alt="">
+      </div>
+
+      <div class="modal-content">
+
+        <div class="section-label" id="modalBrand">
+          MARCA
+        </div>
+
+        <h2 id="modalName">
+          Vehículo
+        </h2>
+
+        <div class="modal-price" id="modalPrice">
+          $0
+        </div>
+
+        <div class="modal-specs">
+
+          <div class="modal-spec">
+            <small>Año</small>
+            <strong id="modalYear"></strong>
+          </div>
+
+          <div class="modal-spec">
+            <small>Kilometraje</small>
+            <strong id="modalKm"></strong>
+          </div>
+
+          <div class="modal-spec">
+            <small>Motor</small>
+            <strong id="modalEngine"></strong>
+          </div>
+
+          <div class="modal-spec">
+            <small>Tipo</small>
+            <strong id="modalType"></strong>
+          </div>
+
+        </div>
+
+        <p id="modalDescription"></p>
+
+        <br>
+
+        <a
+          href="#contacto"
+          class="btn"
+          id="modalContact"
+        >
+          QUIERO ESTE VEHÍCULO
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Toast -->
+
+  <div class="toast" id="toast">
+    Mensaje enviado correctamente.
+  </div>
+
+
+  <!-- ===================================================
+       JAVASCRIPT
+  ==================================================== -->
+
+  <script>
+
+    /* =====================================================
+       INVENTARIO
+    ===================================================== */
+
+    const cars = [
+
+      {
+        id: 1,
+        brand: "BMW",
+        name: "M4 Competition",
+        year: 2024,
+        km: "8.500 km",
+        engine: "3.0 Turbo",
+        type: "Deportivo",
+        price: 89900,
+        image:
+          "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1000&q=80",
+        description:
+          "BMW M4 Competition con motor 3.0 turbo, transmisión automática y un diseño deportivo de alto rendimiento."
+      },
+
+      {
+        id: 2,
+        brand: "Mercedes-Benz",
+        name: "AMG GLE 53",
+        year: 2024,
+        km: "12.200 km",
+        engine: "3.0 Turbo",
+        type: "SUV",
+        price: 98500,
+        image:
+          "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=80",
+        description:
+          "SUV premium con tecnología avanzada, interior de lujo y excelente equilibrio entre confort y rendimiento."
+      },
+
+      {
+        id: 3,
+        brand: "Audi",
+        name: "RS5 Sportback",
+        year: 2023,
+        km: "19.500 km",
+        engine: "2.9 V6",
+        type: "Deportivo",
+        price: 79900,
+        image:
+          "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=80",
+        description:
+          "Audi RS5 Sportback con motor V6 biturbo, tracción integral y un espectacular diseño."
+      },
+
+      {
+        id: 4,
+        brand: "Porsche",
+        name: "911 Carrera",
+        year: 2022,
+        km: "15.800 km",
+        engine: "3.0 Boxer",
+        type: "Deportivo",
+        price: 109000,
+        image:
+          "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=80",
+        description:
+          "Porsche 911 Carrera, uno de los deportivos más icónicos, con prestaciones excepcionales."
+      },
+
+      {
+        id: 5,
+        brand: "Toyota",
+        name: "Land Cruiser",
+        year: 2024,
+        km: "6.300 km",
+        engine: "2.8 Diesel",
+        type: "SUV",
+        price: 67000,
+        image:
+          "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1000&q=80",
+        description:
+          "Toyota Land Cruiser preparada para combinar comodidad, tecnología y capacidad todoterreno."
+      },
+
+      {
+        id: 6,
+        brand: "Tesla",
+        name: "Model S",
+        year: 2024,
+        km: "5.200 km",
+        engine: "Eléctrico",
+        type: "Eléctrico",
+        price: 74000,
+        image:
+          "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1000&q=80",
+        description:
+          "Tesla Model S completamente eléctrico con gran autonomía y tecnología de última generación."
+      }
+
+    ];
+
+
+    /* =====================================================
+       ELEMENTOS
+    ===================================================== */
+
+    const carsGrid = document.getElementById("carsGrid");
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const brandFilter =
+      document.getElementById("brandFilter");
+
+    const typeFilter =
+      document.getElementById("typeFilter");
+
+    const priceFilter =
+      document.getElementById("priceFilter");
+
+    const clearFilters =
+      document.getElementById("clearFilters");
+
+
+    /* =====================================================
+       FORMATEAR PRECIO
+    ===================================================== */
+
+    function formatPrice(price) {
+
+      return new Intl.NumberFormat("es-CO", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0
+      }).format(price);
+
+    }
+
+
+    /* =====================================================
+       MOSTRAR VEHÍCULOS
+    ===================================================== */
+
+    function renderCars(list = cars) {
+
+      carsGrid.innerHTML = "";
+
+      if (list.length === 0) {
+
+        carsGrid.innerHTML = `
+          <div style="
+            grid-column: 1/-1;
+            padding:60px 20px;
+            text-align:center;
+            color:#777;
+          ">
+            <h3>No encontramos vehículos</h3>
+            <p>Prueba modificando los filtros.</p>
+          </div>
+        `;
+
+        return;
+      }
+
+
+      list.forEach(car => {
+
+        const card = document.createElement("article");
+
+        card.className = "car-card";
+
+        card.innerHTML = `
+
+          <div class="car-image">
+
+            <img
+              src="${car.image}"
+              alt="${car.brand} ${car.name}"
+              loading="lazy"
+            >
+
+            <span class="car-badge">
+              Disponible
+            </span>
+
+          </div>
+
+          <div class="car-info">
+
+            <div class="car-brand">
+              ${car.brand}
+            </div>
+
+            <h3 class="car-name">
+              ${car.name}
+            </h3>
+
+            <div class="car-details">
+              <span>${car.year}</span>
+              <span>${car.km}</span>
+              <span>${car.type}</span>
+            </div>
+
+            <div class="car-footer">
+
+              <div class="car-price">
+                ${formatPrice(car.price)}
+              </div>
+
+              <button
+                class="view-car"
+                data-id="${car.id}"
+              >
+                VER DETALLES
+              </button>
+
+            </div>
+
+          </div>
+        `;
+
+        carsGrid.appendChild(card);
+
+      });
+
+
+      document
+        .querySelectorAll(".view-car")
+        .forEach(button => {
+
+          button.addEventListener("click", () => {
+
+            const id =
+              Number(button.dataset.id);
+
+            openCarModal(id);
+
+          });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       FILTRAR
+    ===================================================== */
+
+    function filterCars() {
+
+      const search =
+        searchInput.value
+          .toLowerCase()
+          .trim();
+
+      const brand =
+        brandFilter.value;
+
+      const type =
+        typeFilter.value;
+
+      const maxPrice =
+        priceFilter.value
+          ? Number(priceFilter.value)
+          : Infinity;
+
+
+      const filtered =
+        cars.filter(car => {
+
+          const matchesSearch =
+            `${car.brand} ${car.name}`
+              .toLowerCase()
+              .includes(search);
+
+          const matchesBrand =
+            !brand ||
+            car.brand === brand;
+
+          const matchesType =
+            !type ||
+            car.type === type;
+
+          const matchesPrice =
+            car.price <= maxPrice;
+
+          return (
+            matchesSearch &&
+            matchesBrand &&
+            matchesType &&
+            matchesPrice
+          );
+
+        });
+
+
+      renderCars(filtered);
+
+    }
+
+
+    searchInput.addEventListener(
+      "input",
+      filterCars
+    );
+
+    brandFilter.addEventListener(
+      "change",
+      filterCars
+    );
+
+    typeFilter.addEventListener(
+      "change",
+      filterCars
+    );
+
+    priceFilter.addEventListener(
+      "change",
+      filterCars
+    );
+
+
+    clearFilters.addEventListener(
+      "click",
+      () => {
+
+        searchInput.value = "";
+        brandFilter.value = "";
+        typeFilter.value = "";
+        priceFilter.value = "";
+
+        renderCars();
+
+      }
+    );
+
+
+    /* =====================================================
+       MODAL
+    ===================================================== */
+
+    const carModal =
+      document.getElementById("carModal");
+
+    const modalClose =
+      document.getElementById("modalClose");
+
+
+    function openCarModal(id) {
+
+      const car =
+        cars.find(item => item.id === id);
+
+      if (!car) return;
+
+
+      document.getElementById("modalImage").src =
+        car.image;
+
+      document.getElementById("modalImage").alt =
+        `${car.brand} ${car.name}`;
+
+      document.getElementById("modalBrand").textContent =
+        car.brand;
+
+      document.getElementById("modalName").textContent =
+        car.name;
+
+      document.getElementById("modalPrice").textContent =
+        formatPrice(car.price);
+
+      document.getElementById("modalYear").textContent =
+        car.year;
+
+      document.getElementById("modalKm").textContent =
+        car.km;
+
+      document.getElementById("modalEngine").textContent =
+        car.engine;
+
+      document.getElementById("modalType").textContent =
+        car.type;
+
+      document.getElementById("modalDescription").textContent =
+        car.description;
+
+
+      carModal.classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeModal() {
+
+      carModal.classList.remove("active");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    modalClose.addEventListener(
+      "click",
+      closeModal
+    );
+
+
+    carModal.addEventListener(
+      "click",
+      event => {
+
+        if (event.target === carModal) {
+          closeModal();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+          closeModal();
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       CALCULADORA DE FINANCIACIÓN
+    ===================================================== */
+
+    const vehiclePrice =
+      document.getElementById("vehiclePrice");
+
+    const downPayment =
+      document.getElementById("downPayment");
+
+    const loanMonths =
+      document.getElementById("loanMonths");
+
+    const interestRate =
+      document.getElementById("interestRate");
+
+    const monthlyPayment =
+      document.getElementById("monthlyPayment");
+
+
+    function calculateFinance() {
+
+      const price =
+        Number(vehiclePrice.value) || 0;
+
+      const down =
+        Number(downPayment.value) || 0;
+
+      const months =
+        Number(loanMonths.value) || 1;
+
+      const annualRate =
+        Number(interestRate.value) || 0;
+
+
+      const principal =
+        Math.max(price - down, 0);
+
+      const monthlyRate =
+        annualRate / 100 / 12;
+
+
+      let payment;
+
+
+      if (monthlyRate === 0) {
+
+        payment =
+          principal / months;
+
+      } else {
+
+        payment =
+          principal *
+          (
+            monthlyRate *
+            Math.pow(
+              1 + monthlyRate,
+              months
+            )
+          ) /
+          (
+            Math.pow(
+              1 + monthlyRate,
+              months
+            ) - 1
+          );
+
+      }
+
+
+      monthlyPayment.textContent =
+        formatPrice(payment);
+
+    }
+
+
+    [
+      vehiclePrice,
+      downPayment,
+      loanMonths,
+      interestRate
+    ].forEach(input => {
+
+      input.addEventListener(
+        "input",
+        calculateFinance
+      );
+
+    });
+
+
+    /* =====================================================
+       CONTACTO
+    ===================================================== */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+    const toast =
+      document.getElementById("toast");
+
+
+    contactForm.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+
+        const name =
+          document.getElementById("name").value;
+
+
+        toast.textContent =
+          `Gracias ${name}. Hemos recibido tu solicitud.`;
+
+        toast.classList.add("show");
+
+
+        contactForm.reset();
+
+
+        setTimeout(() => {
+
+          toast.classList.remove("show");
+
+        }, 4000);
+
+      }
+    );
+
+
+    /* =====================================================
+       MENÚ MOBILE
+    ===================================================== */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        navLinks.classList.toggle("active");
+
+      }
+    );
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove("active");
+
+          }
+        );
+
+      });
+
+
+    /* =====================================================
+       INICIO
+    ===================================================== */
+
+    renderCars();
+
+    calculateFinance();
+
+  </script>
+
+</body>
+</html>
